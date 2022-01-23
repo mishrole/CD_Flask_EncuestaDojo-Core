@@ -79,8 +79,10 @@ def result():
 
 @app.route('/all', methods=['GET'])
 def all():
+    surveysList = []
+
     if not 'surveys' in session:
-        session['surveys'] = []
+        session['surveys'] = surveysList
     else:
         print(session['surveys'])
         surveysList = session['surveys']
